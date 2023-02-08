@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Number of Patient</title>
+<style>
+	body
+	{
+		margin: 0px;
+		padding:0px;
+		background-color: #f2b204;
+	}
+	#home
+	{
+		background-color: white;
+		text-decoration: none;
+		margin:20px;
+		padding: 20px;
+		border-radius: 5px;
+		position: relative;
+		top: 5px;
+	}
+	#container
+	{
+		display: flex;
+    	align-items: center;
+ 		justify-content: center;
+    	height: 100vh;
+	}
+	#box
+	{
+		background-color: white;
+		padding: 50px 50px;
+		border-radius: 20px;
+		box-shadow: 5px 5px 30px black;
+	}
+	#msg
+	{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+	#digit
+	{
+		font-size: 150px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<a href="/" id="home">Home</a>
+	<br>
+	<div id="container">
+		<div id="box">
+			<div id="msg">Number of Patients </div>
+			<div id="digit" th:text="${patientCount}"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+<style type="text/css">
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-image: linear-gradient(to bottom right, #4be4ce, #88f79e);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+
+.box
+{
+	display: flex;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.575);
+	border-radius: 20px;
+	box-shadow: 5px 5px 36px black;
+}
+table
+{
+	height: 60vh;
+	width: 60vw;
+}
+
+#container
+{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#heading
+{
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 40px;
+	padding: 20px;
+}
+.cell
+{
+	font-family:  Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+	padding-bottom: 42px;
+}
+a
+{
+	text-decoration: none;
+	color: black;
+}
+img
+{
+	height: 80px;
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+		<div class="box">
+			<table >
+				<tr>
+					<td colspan="3"  id="heading">Patient Management</td>
+				</tr>
+				<tr>
+					<td class="cell"><a href="/allpatients"><img src="view-show-all-icon.svg" alt=""><br> All Patients</a></td>
+					<td class="cell"><a href="/patientcount"><img src="count-icon.svg" alt=""><br>Number of Patients</a></td>
+					<td class="cell"><a href="/addpatient"><img src="data-icon.svg" alt=""><br>Add Patient</a></td>
+				</tr>
+				<tr>
+					<td class="cell"><a href="/findpatientpage"><img src="search-result-found-icon.svg" alt=""><br>Find Patient</a></td>
+					<td class="cell"><a href="/updateform"><img src="update-icon.svg" alt=""><br>Update Patient</a></td>
+					<td class="cell"><a href="/deletepatientpage"><img src="delete-icon.svg" alt=""><br>Delete Patient</a></td>
+				</tr>
+				<tr>
+					<td colspan="3" class="cell"><a href="/patientdetailsearch"><img src="personal-details-icon.svg" alt=""><br> Services Assigned to Patient</a></td>
+				</tr>
+				<tr>
+					<td colspan="3" class="cell"><a href="http://localhost:8082/"><img src="medical-ventilator-icon.svg" alt=""><br> Services</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

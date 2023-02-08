@@ -1,0 +1,14 @@
+
+spring:
+ h2:
+  console:
+   enabled: true
+ sql:
+  init:
+   platform: h2
+ datasource:
+  url: jdbc:h2:mem:alan
+ jpa:
+  defer-datasource-initialization: true
+server:
+ port : 8081

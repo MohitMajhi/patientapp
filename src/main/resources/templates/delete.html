@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete Patient</title>
+<style>
+    body
+	{
+		margin: 0px;
+		padding:0px;
+		background-color: #f2b204;
+	}
+	#home
+	{
+		background-color: white;
+		text-decoration: none;
+		margin:20px;
+		padding: 20px;
+		border-radius: 5px;
+		position: relative;
+		top: 5px;
+	}
+    #container
+	{
+		display: flex;
+    	align-items: center;
+ 		justify-content: center;
+    	height: 100vh;
+	}
+	#box
+	{
+		background-color: white;
+		padding: 50px 50px;
+		border-radius: 20px;
+		box-shadow: 5px 5px 30px black;
+	}
+    #msg
+    {
+        padding-bottom: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    }
+    #ibox
+	{
+		padding: 5px;
+		border-radius: 15px;
+		outline: none;
+	}
+    #sub
+	{
+		padding: 10px;
+		border: none;
+		color: white;
+		border-radius: 20px;
+		background-color: green;
+	}
+</style>
+</head>
+<body>
+    <a href="/" id="home">Home</a>
+	<br>
+    <div id="container">
+        <div id="box">
+            <div id="msg">Delete Patient</div>
+            <form action="/delete" method="get">
+                <input type="text" name="did" id="ibox">
+                <input type="submit" id="sub" value="Delete">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

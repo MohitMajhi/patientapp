@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	body
+	{
+		margin: 0px;
+		padding:0px;
+		background-color: #f2b204;
+	}
+	#home
+	{
+		background-color: white;
+		text-decoration: none;
+		margin:20px;
+		padding: 20px;
+		border-radius: 5px;
+		position: relative;
+		top: 5px;
+	}
+    #container
+	{
+		display: flex;
+    	align-items: center;
+ 		justify-content: center;
+    	height: 80vh;
+	}
+	
+	#fail
+	{
+		font-size: 200px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+	#erm{
+		font-size: 50px;
+		align-items: center;
+		color: rgb(59, 57, 57);
+	}
+</style>
+</head>
+<body>
+<a href="/" id="home">Home</a>
+	<br>
+	<div id="container">
+		<table>
+			<tr><td><div id="fail">FAIL</div>  <br></td></tr>
+			<tr><td><div id="erm" th:text="${res.getErrorMessage}"></div></td></tr>
+		</table>
+		
+		
+	</div>
+
+</body>
+</html>

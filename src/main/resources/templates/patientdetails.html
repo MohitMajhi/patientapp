@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient Details</title>
+<style>
+	body
+	{
+		margin: 0px;
+		padding:0px;
+		background-color: #f2b204;
+	}
+	#home
+	{
+		background-color: white;
+		text-decoration: none;
+		margin:20px;
+		padding: 20px;
+		border-radius: 5px;
+		position: relative;
+		top: 5px;
+	}
+	#container
+	{
+		display: flex;
+    	align-items: center;
+ 		justify-content: center;
+    	height: 100vh;
+	}
+	#box
+	{
+		background-color: white;
+		padding: 50px 50px;
+		border-radius: 20px;
+		box-shadow: 5px 5px 30px black;
+	}
+	.hcell
+	{
+		height:50px;
+		text-align: center;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 20px;
+		border-bottom:2px solid black;
+	}
+	.dcell
+	{
+		text-align: center;
+		font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 20px;
+		padding-bottom:20px;
+	}
+	.pd
+	{
+		font-size: 15px;
+	}
+	#tbl
+	{
+		align-items: center;
+	}
+	.val
+	{
+		font-size: 20px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+</style>
+</head>
+<body>
+
+	<a id="home" href="/">Home</a>
+	<br>
+
+	<div id="container">
+		<div id="box">
+			<h1>Patient Details</h1>
+			<div class="pd">
+				Patient id - <span class="val" th:text="${patientdata.id}"></span>
+			</div>
+			<div class="pd">
+				Patient name - <span class="val" th:text="${patientdata.firstName}"></span> <span class="val" th:text="${patientdata.lastName}"></span>
+			</div>
+			<div id="tbl">
+				<table>
+	
+					<tbody>
+		
+						<tr>
+							<td class="hcell">ID</td>
+							<td class="hcell">Service Name</td>
+							<td class="hcell">Fees Charged</td>
+						</tr>
+						
+						<tr th:each="srl: ${serviceList}">
+							<td class="dcell" th:text="${srl.id}"></td>
+							<td class="dcell" th:text="${srl.service_name}"></td>
+							<td class="dcell" th:text="${srl.fees}"></td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div>
+			
+		</div>
+	</div>
+
+	
+</body>
+</html>
